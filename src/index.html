@@ -1,150 +1,690 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Welcome — Demo Project</title>
-    <meta name="description" content="Welcome page for the Demo Project" />
-    <style>
-        :root{
-            --bg:#f7f9fc; --card:#ffffff; --text:#0f1724; --muted:#64748b; --accent:#2563eb;
-            --radius:12px; --gap:20px; --max-width:980px;
-        }
-        [data-theme="dark"]{
-            --bg:#071025; --card:#071a2b; --text:#e6eef8; --muted:#9fb3d0; --accent:#60a5fa;
-        }
-        *{box-sizing:border-box}
+<!DOCTYPE html><!doctype html>
+
+<html lang="en"><html lang="en">
+
+<head><head>
+
+    <meta charset="UTF-8">    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>The Enchanted Forest - Wanderlust Travel Blog</title>    <title>Welcome — Demo Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">    <meta name="description" content="Welcome page for the Demo Project" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;700&display=swap" rel="stylesheet">        :root{
+
+    <style>            --bg:#f7f9fc; --card:#ffffff; --text:#0f1724; --muted:#64748b; --accent:#2563eb;
+
+        /* Reset and Base Styles */            --radius:12px; --gap:20px; --max-width:980px;
+
+        * {        }
+
+            margin: 0;        [data-theme="dark"]{
+
+            padding: 0;            --bg:#071025; --card:#071a2b; --text:#e6eef8; --muted:#9fb3d0; --accent:#60a5fa;
+
+            box-sizing: border-box;        }
+
+        }        *{box-sizing:border-box}
+
         html,body{height:100%}
-        body{
-            margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background:linear-gradient(180deg, var(--bg), #e9f1ff20); color:var(--text); -webkit-font-smoothing:antialiased;
-            display:flex; align-items:center; justify-content:center; padding:40px;
+
+        body {        body{
+
+            font-family: 'Newsreader', serif;            margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+            line-height: 1.5;            background:linear-gradient(180deg, var(--bg), #e9f1ff20); color:var(--text); -webkit-font-smoothing:antialiased;
+
+            color: #FFFFFF;            display:flex; align-items:center; justify-content:center; padding:40px;
+
+            background-color: #122117;        }
+
+            min-height: 100vh;        .container{
+
+        }            width:100%; max-width:var(--max-width); background:transparent;
+
         }
-        .container{
-            width:100%; max-width:var(--max-width); background:transparent;
-        }
-        header{
-            display:flex; align-items:center; justify-content:space-between; gap:var(--gap); margin-bottom:24px;
-        }
-        .brand{display:flex; align-items:center; gap:12px;}
-        .logo{
+
+        /* Header Styles */        header{
+
+        header {            display:flex; align-items:center; justify-content:space-between; gap:var(--gap); margin-bottom:24px;
+
+            border-bottom: 1px solid #E5E8EB;        }
+
+            padding: 12px 40px;        .brand{display:flex; align-items:center; gap:12px;}
+
+        }        .logo{
+
             width:56px; height:56px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#4f46e5);
-            color:white; border-radius:12px; font-weight:700; font-size:18px;
-        }
-        h1{margin:0; font-size:28px}
-        p.lead{margin:6px 0 0; color:var(--muted)}
-        .card{
+
+        nav {            color:white; border-radius:12px; font-weight:700; font-size:18px;
+
+            display: flex;        }
+
+            justify-content: space-between;        h1{margin:0; font-size:28px}
+
+            align-items: center;        p.lead{margin:6px 0 0; color:var(--muted)}
+
+        }        .card{
+
             background:var(--card); border-radius:var(--radius); padding:28px; box-shadow:0 6px 30px rgba(16,24,40,0.06);
-        }
-        .hero{display:flex; gap:24px; align-items:center; flex-wrap:wrap}
-        .hero-text{flex:1 1 320px}
-        .actions{display:flex; gap:12px; margin-top:18px}
-        a.button{
+
+        .nav-left {        }
+
+            display: flex;        .hero{display:flex; gap:24px; align-items:center; flex-wrap:wrap}
+
+            align-items: center;        .hero-text{flex:1 1 320px}
+
+            gap: 16px;        .actions{display:flex; gap:12px; margin-top:18px}
+
+        }        a.button{
+
             display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:10px; text-decoration:none; color:white;
-            background:var(--accent); font-weight:600; box-shadow:0 6px 18px rgba(37,99,235,0.14);
+
+        .logo-container {            background:var(--accent); font-weight:600; box-shadow:0 6px 18px rgba(37,99,235,0.14);
+
+            display: flex;        }
+
+            align-items: center;        button.ghost{
+
+        }            background:transparent; color:var(--accent); border:1px solid rgba(37,99,235,0.12); padding:10px 14px; border-radius:10px; cursor:pointer;
+
         }
-        button.ghost{
-            background:transparent; color:var(--accent); border:1px solid rgba(37,99,235,0.12); padding:10px 14px; border-radius:10px; cursor:pointer;
-        }
-        .meta{color:var(--muted); font-size:13px; margin-top:10px}
-        .features{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:20px}
-        .feature{background:linear-gradient(180deg,rgba(0,0,0,0.01),transparent); padding:14px; border-radius:10px}
-        small.time{display:inline-block; margin-left:8px; color:var(--muted); font-weight:600}
+
+        .logo {        .meta{color:var(--muted); font-size:13px; margin-top:10px}
+
+            width: 16px;        .features{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:20px}
+
+            height: 16px;        .feature{background:linear-gradient(180deg,rgba(0,0,0,0.01),transparent); padding:14px; border-radius:10px}
+
+        }        small.time{display:inline-block; margin-left:8px; color:var(--muted); font-weight:600}
+
         footer{margin-top:18px; color:var(--muted); font-size:13px; text-align:center}
-        @media (max-width:640px){ body{padding:20px} h1{font-size:22px} .logo{width:48px;height:48px} }
+
+        .brand-name {        @media (max-width:640px){ body{padding:20px} h1{font-size:22px} .logo{width:48px;height:48px} }
+
+            font-family: 'Newsreader', serif;    </style>
+
+            font-weight: 700;</head>
+
+            font-size: 18px;<body>
+
+            line-height: 1.28;    <div class="container">
+
+            color: #FFFFFF;        <header>
+
+        }            <div class="brand">
+
+                <div class="logo" aria-hidden="true">DP</div>
+
+        .nav-center {                <div>
+
+            display: flex;                    <h1>Welcome to Demo Project</h1>
+
+            gap: 36px;                    <p class="lead">A simple starter landing page — fast, accessible, and responsive.</p>
+
+            align-items: center;                </div>
+
+        }            </div>
+
+            <div style="display:flex;align-items:center;gap:12px">
+
+        .nav-link {                <div id="clock" class="meta" aria-live="polite">Loading time…</div>
+
+            font-family: 'Newsreader', serif;                <button id="themeToggle" class="ghost" aria-pressed="false" title="Toggle theme">Toggle theme</button>
+
+            font-weight: 500;            </div>
+
+            font-size: 14px;        </header>
+
+            line-height: 1.5;
+
+            color: #FFFFFF;        <main class="card" id="main">
+
+            text-decoration: none;            <section class="hero" aria-labelledby="welcomeTitle">
+
+            transition: color 0.3s ease;                <div class="hero-text">
+
+        }                    <h2 id="welcomeTitle" style="margin:0 0 8px">Hello — get started quickly</h2>
+
+                    <p class="meta">This page demonstrates a clean structure and small utilities you can extend for your app.</p>
+
+        .nav-link:hover {                    <div class="actions">
+
+            color: #94C7A6;                        <a href="#get-started" class="button">Get started</a>
+
+        }                        <button class="ghost" onclick="alert('This is a demo')">Explore demo</button>
+
+                    </div>
+
+        .nav-right {                    <p class="meta" style="margin-top:14px">Tip: Press the theme toggle to switch between light and dark modes.</p>
+
+            display: flex;                </div>
+
+            gap: 8px;
+
+            align-items: center;                <aside style="width:260px">
+
+        }                    <div style="border-radius:12px; padding:16px; background:linear-gradient(180deg,#f2f8ff,#ffffff);">
+
+                        <strong>Overview</strong>
+
+        .icon-button {                        <p class="meta" style="margin:8px 0 0">Clean HTML, responsive layout, accessible controls and a tiny JS utility.</p>
+
+            background-color: #264530;                        <div style="margin-top:12px; font-size:13px; color:var(--muted)">
+
+            border: none;                            <div>Built: <small id="builtAt">—</small></div>
+
+            border-radius: 12px;                            <div style="margin-top:8px">Status: <span style="color:var(--accent); font-weight:600">Ready</span></div>
+
+            padding: 10px;                        </div>
+
+            height: 40px;                    </div>
+
+            display: flex;                </aside>
+
+            align-items: center;            </section>
+
+            justify-content: center;
+
+            cursor: pointer;            <section id="get-started" style="margin-top:22px">
+
+            transition: background-color 0.3s ease;                <div class="features" aria-hidden="false">
+
+        }                    <div class="feature">
+
+                        <strong>Accessible</strong>
+
+        .icon-button:hover {                        <div class="meta">Semantic HTML, aria attributes and high contrast support.</div>
+
+            background-color: #366345;                    </div>
+
+        }                    <div class="feature">
+
+                        <strong>Responsive</strong>
+
+        .icon-button img {                        <div class="meta">Flexible grid and scalable typography for all devices.</div>
+
+            width: 20px;                    </div>
+
+            height: 20px;                    <div class="feature">
+
+        }                        <strong>Customizable</strong>
+
+                        <div class="meta">Easy to extend styles and components for your needs.</div>
+
+        .user-avatar {                    </div>
+
+            width: 40px;                </div>
+
+            height: 40px;            </section>
+
+            border-radius: 20px;
+
+            object-fit: cover;            <footer>
+
+        }                <div>© <span id="year"></span> Demo Project — Made with HTML</div>
+
+            </footer>
+
+        /* Main Content */        </main>
+
+        main {    </div>
+
+            padding: 20px 160px;
+
+        }    <script>
+
+        // small utilities: clock, theme toggle, built date
+
+        /* Breadcrumb */        (function(){
+
+        .breadcrumb {            const clock = document.getElementById('clock');
+
+            display: flex;            const year = document.getElementById('year');
+
+            flex-wrap: wrap;            const builtAt = document.getElementById('builtAt');
+
+            gap: 8px;            const themeToggle = document.getElementById('themeToggle');
+
+            padding: 16px;            function updateClock(){
+
+        }                const d = new Date();
+
+                clock.textContent = d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+
+        .breadcrumb-item {            }
+
+            font-family: 'Newsreader', serif;            year.textContent = new Date().getFullYear();
+
+            font-weight: 500;            builtAt.textContent = new Date().toLocaleDateString();
+
+            font-size: 16px;            updateClock();
+
+            line-height: 1.5;            setInterval(updateClock, 30_000);
+
+            text-decoration: none;
+
+        }            // theme persistence
+
+            const preferred = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+        .breadcrumb-link {            document.documentElement.setAttribute('data-theme', preferred);
+
+            color: #94C7A6;            themeToggle.setAttribute('aria-pressed', preferred === 'dark');
+
+        }            themeToggle.addEventListener('click', () => {
+
+                const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+
+        .breadcrumb-separator {                const next = current === 'dark' ? 'light' : 'dark';
+
+            color: #94C7A6;                document.documentElement.setAttribute('data-theme', next);
+
+        }                localStorage.setItem('theme', next);
+
+                themeToggle.setAttribute('aria-pressed', next === 'dark');
+
+        .breadcrumb-current {            });
+
+            color: #FFFFFF;        })();
+
+        }    </script>
+
+</body>
+
+        /* Article Header */</html>
+        .article-header {
+            padding: 24px 16px 12px;
+        }
+
+        .article-title {
+            font-family: 'Newsreader', serif;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 1.25;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+
+        .article-meta {
+            padding: 4px 16px 12px;
+            font-family: 'Newsreader', serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #94C7A6;
+        }
+
+        /* Hero Image */
+        .hero-image-container {
+            padding: 12px 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 640px;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        /* Article Content */
+        .article-content {
+            padding: 4px 16px 12px;
+        }
+
+        .article-paragraph {
+            font-family: 'Newsreader', serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #FFFFFF;
+            margin-bottom: 24px;
+        }
+
+        /* Social Stats */
+        .social-stats {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 8px 16px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+        }
+
+        .stat-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .stat-number {
+            font-family: 'Newsreader', serif;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 1.54;
+            color: #94C7A6;
+        }
+
+        /* Comments Section */
+        .comments-section {
+            padding: 20px 16px 12px;
+        }
+
+        .comments-title {
+            font-family: 'Newsreader', serif;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 1.27;
+            color: #FFFFFF;
+            margin-bottom: 24px;
+        }
+
+        /* Comment */
+        .comment {
+            display: flex;
+            gap: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .comment-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .comment-content {
+            flex: 1;
+        }
+
+        .comment-header {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .comment-author {
+            font-family: 'Newsreader', serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #FFFFFF;
+        }
+
+        .comment-time {
+            font-family: 'Newsreader', serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #94C7A6;
+        }
+
+        .comment-text {
+            font-family: 'Newsreader', serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #FFFFFF;
+        }
+
+        /* Comment Form */
+        .comment-form {
+            padding: 12px 16px;
+        }
+
+        .comment-input-wrapper {
+            margin-bottom: 12px;
+        }
+
+        .comment-input {
+            width: 100%;
+            background-color: #1C3321;
+            border: 1px solid #366345;
+            border-radius: 12px;
+            padding: 15px;
+            font-family: 'Newsreader', serif;
+            font-size: 14px;
+            color: #FFFFFF;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .comment-input::placeholder {
+            color: #94C7A6;
+        }
+
+        .comment-input:focus {
+            outline: none;
+            border-color: #1AB24D;
+        }
+
+        .comment-submit-wrapper {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .submit-button {
+            background-color: #1AB24D;
+            border: none;
+            border-radius: 12px;
+            padding: 0 16px;
+            height: 40px;
+            font-family: 'Newsreader', serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #159A42;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            main {
+                padding: 20px 80px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 20px;
+            }
+
+            main {
+                padding: 20px 40px;
+            }
+
+            .nav-center {
+                display: none;
+            }
+
+            .article-title {
+                font-size: 24px;
+            }
+
+            .hero-image {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 20px 20px;
+            }
+
+            .article-title {
+                font-size: 20px;
+            }
+
+            .hero-image {
+                height: 300px;
+            }
+
+            .social-stats {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="brand">
-                <div class="logo" aria-hidden="true">DP</div>
-                <div>
-                    <h1>Welcome to Demo Project</h1>
-                    <p class="lead">A simple starter landing page — fast, accessible, and responsive.</p>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo-container">
+                    <img src="../images/logo.svg" alt="Wanderlust Logo" class="logo">
+                </div>
+                <h1 class="brand-name">Wanderlust</h1>
+            </div>
+            
+            <div class="nav-center">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#destinations" class="nav-link">Destinations</a>
+                <a href="#stories" class="nav-link">Stories</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-right">
+                <button class="icon-button" aria-label="Search">
+                    <img src="../images/search-icon.svg" alt="Search">
+                </button>
+                <button class="icon-button" aria-label="Menu">
+                    <img src="../images/menu-icon.svg" alt="Menu">
+                </button>
+                <img src="../images/user-avatar.png" alt="User Avatar" class="user-avatar">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="#stories" class="breadcrumb-item breadcrumb-link">Stories</a>
+                <span class="breadcrumb-item breadcrumb-separator">/</span>
+                <span class="breadcrumb-item breadcrumb-current">The Enchanted Forest</span>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <h2 class="article-title">The Enchanted Forest: A Journey Through the Emerald Canopy</h2>
+            </header>
+
+            <div class="article-meta">
+                By Amelia Stone · Published on July 15, 2023
+            </div>
+
+            <!-- Hero Image -->
+            <div class="hero-image-container">
+                <img src="../images/hero-image.png" alt="The Enchanted Forest" class="hero-image">
+            </div>
+
+            <!-- Article Content -->
+            <div class="article-content">
+                <p class="article-paragraph">
+                    Deep within the heart of the Pacific Northwest lies a realm of ancient trees and whispering streams, a place where time seems to slow and the air hums with the secrets of the forest. This is the Enchanted Forest, a sanctuary of natural beauty that captivates the soul and ignites the imagination. As I stepped into this verdant world, I was immediately enveloped by the towering canopy, its emerald leaves filtering the sunlight into a mosaic of light and shadow. The forest floor, a tapestry of moss and ferns, cushioned my footsteps as I ventured deeper into its embrace.
+                </p>
+
+                <p class="article-paragraph">
+                    The trail wound through the trees, revealing hidden glades and babbling brooks. The sound of water, a constant companion, mingled with the rustling of leaves and the occasional call of a bird, creating a symphony of nature's music. I paused by a crystal-clear stream, its surface reflecting the surrounding greenery like a mirror. The water, cool and refreshing, invited me to linger and soak in the tranquility of the moment.
+                </p>
+
+                <p class="article-paragraph">
+                    Further along, I encountered a grove of giant redwoods, their massive trunks reaching towards the sky like ancient pillars. Standing beneath their towering presence, I felt a sense of awe and humility, a reminder of the enduring power of nature. The air here was thick with the scent of pine and damp earth, a fragrance that evoked a sense of timelessness and connection to the natural world.
+                </p>
+
+                <p class="article-paragraph">
+                    As the day drew to a close, I found a secluded spot to rest and reflect on my journey. The forest, bathed in the golden light of the setting sun, seemed to glow with an ethereal beauty. The experience had been a balm for the soul, a reminder of the restorative power of nature and the importance of preserving these precious sanctuaries for generations to come. The Enchanted Forest is more than just a collection of trees; it's a living, breathing entity that offers a glimpse into the magic of the natural world.
+                </p>
+            </div>
+
+            <!-- Social Stats -->
+            <div class="social-stats">
+                <div class="stat-item">
+                    <img src="../images/heart-icon.svg" alt="Likes" class="stat-icon">
+                    <span class="stat-number">234</span>
+                </div>
+                <div class="stat-item">
+                    <img src="../images/comment-icon.svg" alt="Comments" class="stat-icon">
+                    <span class="stat-number">56</span>
+                </div>
+                <div class="stat-item">
+                    <img src="../images/share-icon.svg" alt="Shares" class="stat-icon">
+                    <span class="stat-number">123</span>
                 </div>
             </div>
-            <div style="display:flex;align-items:center;gap:12px">
-                <div id="clock" class="meta" aria-live="polite">Loading time…</div>
-                <button id="themeToggle" class="ghost" aria-pressed="false" title="Toggle theme">Toggle theme</button>
-            </div>
-        </header>
 
-        <main class="card" id="main">
-            <section class="hero" aria-labelledby="welcomeTitle">
-                <div class="hero-text">
-                    <h2 id="welcomeTitle" style="margin:0 0 8px">Hello — get started quickly</h2>
-                    <p class="meta">This page demonstrates a clean structure and small utilities you can extend for your app.</p>
-                    <div class="actions">
-                        <a href="#get-started" class="button">Get started</a>
-                        <button class="ghost" onclick="alert('This is a demo')">Explore demo</button>
-                    </div>
-                    <p class="meta" style="margin-top:14px">Tip: Press the theme toggle to switch between light and dark modes.</p>
-                </div>
+            <!-- Comments Section -->
+            <section class="comments-section">
+                <h3 class="comments-title">Comments</h3>
 
-                <aside style="width:260px">
-                    <div style="border-radius:12px; padding:16px; background:linear-gradient(180deg,#f2f8ff,#ffffff);">
-                        <strong>Overview</strong>
-                        <p class="meta" style="margin:8px 0 0">Clean HTML, responsive layout, accessible controls and a tiny JS utility.</p>
-                        <div style="margin-top:12px; font-size:13px; color:var(--muted)">
-                            <div>Built: <small id="builtAt">—</small></div>
-                            <div style="margin-top:8px">Status: <span style="color:var(--accent); font-weight:600">Ready</span></div>
+                <!-- Comment 1 -->
+                <div class="comment">
+                    <img src="../images/comment-avatar-1.png" alt="Ethan Carter" class="comment-avatar">
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">Ethan Carter</span>
+                            <span class="comment-time">2 days ago</span>
                         </div>
+                        <p class="comment-text">
+                            Absolutely stunning! Your words paint such a vivid picture of this magical place. I can almost feel the cool air and smell the pine. Thank you for sharing this experience.
+                        </p>
                     </div>
-                </aside>
-            </section>
+                </div>
 
-            <section id="get-started" style="margin-top:22px">
-                <div class="features" aria-hidden="false">
-                    <div class="feature">
-                        <strong>Accessible</strong>
-                        <div class="meta">Semantic HTML, aria attributes and high contrast support.</div>
+                <!-- Comment 2 -->
+                <div class="comment">
+                    <img src="../images/comment-avatar-2.png" alt="Sophia Bennett" class="comment-avatar">
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">Sophia Bennett</span>
+                            <span class="comment-time">1 day ago</span>
+                        </div>
+                        <p class="comment-text">
+                            This sounds like a dream! I've always wanted to visit the Pacific Northwest, and your description has only fueled my desire. I'll definitely be adding the Enchanted Forest to my travel list.
+                        </p>
                     </div>
-                    <div class="feature">
-                        <strong>Responsive</strong>
-                        <div class="meta">Flexible grid and scalable typography for all devices.</div>
-                    </div>
-                    <div class="feature">
-                        <strong>Customizable</strong>
-                        <div class="meta">Easy to extend styles and components for your needs.</div>
+                </div>
+
+                <!-- Comment 3 -->
+                <div class="comment">
+                    <img src="../images/comment-avatar-3.png" alt="Liam Harper" class="comment-avatar">
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">Liam Harper</span>
+                            <span class="comment-time">12 hours ago</span>
+                        </div>
+                        <p class="comment-text">
+                            What a beautiful story! It's so important to connect with nature and appreciate its wonders. Your journey through the Enchanted Forest is truly inspiring.
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <footer>
-                <div>© <span id="year"></span> Demo Project — Made with HTML</div>
-            </footer>
-        </main>
-    </div>
-
-    <script>
-        // small utilities: clock, theme toggle, built date
-        (function(){
-            const clock = document.getElementById('clock');
-            const year = document.getElementById('year');
-            const builtAt = document.getElementById('builtAt');
-            const themeToggle = document.getElementById('themeToggle');
-            function updateClock(){
-                const d = new Date();
-                clock.textContent = d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
-            }
-            year.textContent = new Date().getFullYear();
-            builtAt.textContent = new Date().toLocaleDateString();
-            updateClock();
-            setInterval(updateClock, 30_000);
-
-            // theme persistence
-            const preferred = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', preferred);
-            themeToggle.setAttribute('aria-pressed', preferred === 'dark');
-            themeToggle.addEventListener('click', () => {
-                const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-                const next = current === 'dark' ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', next);
-                localStorage.setItem('theme', next);
-                themeToggle.setAttribute('aria-pressed', next === 'dark');
-            });
-        })();
-    </script>
+            <!-- Comment Form -->
+            <form class="comment-form">
+                <div class="comment-input-wrapper">
+                    <textarea class="comment-input" placeholder="Add a comment..." aria-label="Add a comment"></textarea>
+                </div>
+                <div class="comment-submit-wrapper">
+                    <button type="submit" class="submit-button">Post Comment</button>
+                </div>
+            </form>
+        </article>
+    </main>
 </body>
 </html>
