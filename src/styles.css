@@ -1,0 +1,383 @@
+/* Travel Blog Website - Wanderlust */
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Newsreader', serif;
+    line-height: 1.5;
+    color: #FFFFFF;
+    background-color: #122117;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    border-bottom: 1px solid #E5E8EB;
+    padding: 12px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 16px;
+    height: 16px;
+}
+
+.brand-name {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.28;
+    color: #FFFFFF;
+}
+
+.nav-center {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #94C7A6;
+}
+
+.nav-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.icon-button {
+    background-color: #264530;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.icon-button:hover {
+    background-color: #366345;
+}
+
+.icon-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Main Content */
+main {
+    padding: 20px 160px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px;
+}
+
+.breadcrumb-item {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.breadcrumb-link {
+    color: #94C7A6;
+}
+
+.breadcrumb-separator {
+    color: #94C7A6;
+}
+
+.breadcrumb-current {
+    color: #FFFFFF;
+}
+
+/* Article Header */
+.article-header {
+    padding: 24px 16px 12px;
+}
+
+.article-title {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.25;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.article-meta {
+    padding: 4px 16px 12px;
+    font-family: 'Newsreader', serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #94C7A6;
+}
+
+/* Hero Image */
+.hero-image-container {
+    padding: 12px 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 640px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Article Content */
+.article-content {
+    padding: 4px 16px 12px;
+}
+
+.article-paragraph {
+    font-family: 'Newsreader', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+/* Social Stats */
+.social-stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 8px 16px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+}
+
+.stat-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.stat-number {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.54;
+    color: #94C7A6;
+}
+
+/* Comments Section */
+.comments-section {
+    padding: 20px 16px 12px;
+}
+
+.comments-title {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.27;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+/* Comment */
+.comment {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-header {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.comment-author {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+
+.comment-time {
+    font-family: 'Newsreader', serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #94C7A6;
+}
+
+.comment-text {
+    font-family: 'Newsreader', serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+
+/* Comment Form */
+.comment-form {
+    padding: 12px 16px;
+}
+
+.comment-input-wrapper {
+    margin-bottom: 12px;
+}
+
+.comment-input {
+    width: 100%;
+    background-color: #1C3321;
+    border: 1px solid #366345;
+    border-radius: 12px;
+    padding: 15px;
+    font-family: 'Newsreader', serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.comment-input::placeholder {
+    color: #94C7A6;
+}
+
+.comment-input:focus {
+    outline: none;
+    border-color: #1AB24D;
+}
+
+.comment-submit-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-button {
+    background-color: #1AB24D;
+    border: none;
+    border-radius: 12px;
+    padding: 0 16px;
+    height: 40px;
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #159A42;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    main {
+        padding: 20px 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    main {
+        padding: 20px 40px;
+    }
+
+    .nav-center {
+        display: none;
+    }
+
+    .article-title {
+        font-size: 24px;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 20px 20px;
+    }
+
+    .article-title {
+        font-size: 20px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .social-stats {
+        flex-direction: column;
+    }
+}
